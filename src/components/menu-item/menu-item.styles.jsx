@@ -1,5 +1,7 @@
-.menu-item {
-  min-width: 30%;
+import styled from "styled-components";
+
+export const MenuItemContainer = styled.div`
+min-width: 30%;
   height: 240px;
   flex: 1 1 auto;
   display: flex;
@@ -33,15 +35,17 @@
   &:last-child {
     margin-left: 7.5px;
   }
+`;
 
-  .background-image {
+export const BackgroundImageContainer = styled.div`
     height: 100%;
     width: 100%;
     background-position: center;
     background-size: cover;
-  }
+    background-image: ${({imageUrl}) => `url(${imageUrl})`}
+`;
 
-  .content {
+export const ContentContainer = styled.div`
     height: 90px;
     padding: 0 25px;
     display: flex;
@@ -52,17 +56,16 @@
     background-color: white;
     opacity: 0.7;
     position: absolute;
+`;
 
-    .title {
-      font-weight: bold;
+export const TitleContainer = styled.h1`
+font-weight: bold;
       margin-bottom: 6px;
       font-size: 22px;
       color: #4a4a4a;
-    }
+`;
 
-    .subtitle {
-      font-weight: lighter;
-      font-size: 16px;
-    }
-  }
-}
+export const SubTitleContainer = styled.span`
+    font-weight: lighter;   
+    font-size: 16px;
+`;
