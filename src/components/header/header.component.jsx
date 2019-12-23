@@ -15,7 +15,7 @@ import {
 } from "./header.styles";
 
 import CartIcon from "../cart-icon/cart-icon.component";
-import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import CartDropdownContainer from "../cart-dropdown/cart-dropdown.container";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 
@@ -38,7 +38,7 @@ const Header = ({ currentUser, cartDropdownIsHidden, handleCartIconClick }) => (
             <CartIcon/>
         </OptionsContainer>
         {
-            cartDropdownIsHidden ? null : <CartDropdown/>
+            cartDropdownIsHidden ? null : <CartDropdownContainer/>
         }
     </HeaderContainer>
 );
