@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
-import { fetchCollectionsStartAsync } from "../../redux/shop/shop.actions";
+import { fetchCollectionsStart } from "../../redux/shop/shop.actions";
 
 import './shoppage.styles.scss';
 
@@ -37,7 +37,7 @@ ShopPage.propTypes = { match: PropTypes.any };
 
 
 const mapDispatchToProps = dispatch => ({
-    fetchCollections: () => dispatch(fetchCollectionsStartAsync())
+    fetchCollections: () => dispatch(fetchCollectionsStart())
 });
 
 export default connect(
